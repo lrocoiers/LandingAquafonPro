@@ -1,0 +1,193 @@
+
+*{  box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+@font-face {
+    font-family: FonAquaFon Made;
+    src: url(Font/FontAquaFon\ Made\ -\ \ Tommy\ Regular.otf) format('truetype');
+    
+}
+body {
+    font-family:'FonAquaFon Made';
+    background-color: #001331;
+    color: #f0f0f0;
+}
+/*MENU PRINCIPIAL*/
+header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+#menuPrincipial{
+    
+    box-sizing: border-box;
+    display: flex;
+    background-color: black;
+    justify-content: space-around;
+    max-width: 100%;
+    overflow: hidden;
+    height: 90px;
+   
+}
+.menuIcon{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;    
+    font-size: 1em;
+    color: #ccc;
+}
+
+.menuIcon img{
+transition: transform 0.3s ease;
+}
+.menuIcon img:hover{ 
+    transform: scale(1.1);
+}
+.menuIcon nav{
+  display: flex;  
+  justify-content: center;
+  align-items: center;  
+  width:150px;
+}
+.menuIcon nav a{ 
+    font-size: 700;
+    color: white;
+    text-decoration: none;
+}
+.logoMenu{
+    max-width: 100%;
+    height: auto;
+}
+/*PRIMERA PORTADA*/
+main .contenedor1-Hola{ 
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor1-Hola{
+    margin-top: 100px;
+    display: flex;
+    padding: 10%;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    border: 1px solid green;
+    max-width: 100%;
+}
+.contenedor1-Hola h1{
+    font-size: 250px;
+    color: #ffcd48;
+    
+}
+.contenedor1-Hola p{
+    font-size: 1.2em;    
+}
+/*SEGUNDA PORTADA:CALIDAD DE SERVICIOS*/
+.contenedor2-CalidadServicio{
+    border: 1px solid ffcd48;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    height: 100%;
+   
+    background-color: black;
+    gap: 35px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: -10px;
+    
+}
+
+.contenedor2-CalidadServicio img{
+    height: 230px;
+    width: 230px;
+    transition: filter 0.3s ease;
+    transition: transform 0.3s ease;
+    filter: grayscale(100%);
+}
+.contenedor2-CalidadServicio img:hover{
+    filter: grayscale(0%); /* Cambia a escala de grises */
+    transform: scale(1.1);
+}
+.imagenesdeServicio{
+    border: 1px solid red;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    justify-content: center;  
+    gap: 50px; 
+}
+.contenedor2-CalidadServicio p{
+    font-size: 1.5em;
+    width:500px ;
+}
+.contenedor2-CalidadServicio button{
+    border: 2px solid #ffcd48; /* Borde de 2px sólido con color ef8818 */
+    border-radius: 20px; /* Bordes redondeados */
+    background-color: transparent; /* Sin relleno de fondo */
+    padding: 10px 20px; /* Ajusta el relleno según sea necesario */
+    color: #ffcd48; /* Color del texto */
+    font-family:'FonAquaFon Made';
+    font-size: 16px; /* Tamaño del texto */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    margin-bottom: 50px;
+}
+
+.contenedor2-CalidadServicio button:hover {
+    background-color: #866d27c5; /* Cambia el color de fondo al pasar el mouse */
+    color: #fff; /* Cambia el color del texto al pasar el mouse */
+}
+
+
+
+/*flex lineal 
+[CAMBIAR PARA EL EL RESPONSIBLE A COL]*/
+.contenedor-padre{
+    border: 1px solid #ccc;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 300px;
+    background-image: linear-gradient(rgba(0, 0, 0, 5),rgba(255, 0, 0, 0));  
+    /*Separador de elementos (no laterales)*/
+    gap: 20px;
+}
+/* esta determinado el tamaño del flex en 1*/
+ .hijo-contenedor{
+    
+    box-sizing: border-box;   
+    transition: filter 0.3s ease;
+    text-align: center;
+    height: 300px;
+    padding: 
+    transition: transform 0.3s ease;
+ }
+
+ .hijo-contenedor img{
+    transition: transform 0.3s ease;
+    
+    filter: grayscale(100%); /* Cambia a escala de grises */
+    height: 150px;
+    width: 150px;
+ }
+ .hijo-contenedor img:hover{
+    filter: grayscale(0%);
+    transform: scale(1.1) rotateY(180deg);
+ }
+
+
+
+/*el flex:2 es el que determina el tamaño de espacio dentro del contenedor hijo en el padre
+Aqui se pueden ajustar las transformaciones de los contenedores  haciendo hover*/
+.contenedor-padre .hijo-contenedor{
+transition: transform 0.7s ease;
+}
+.contenedor-padre .hijo-contenedor:hover{
+    transform: scale(1.1);
+    border: 1px solid #ffcd48; 
+   
+  }
