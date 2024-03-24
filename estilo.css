@@ -8,6 +8,7 @@
     src: url(Font/FontAquaFon\ Made\ -\ \ Tommy\ Regular.otf) format('truetype');
     
 }
+
 body {
     font-family:'FonAquaFon Made';
     background-color: #001331;
@@ -22,16 +23,15 @@ header{
 }
 
 #menuPrincipial{
-    
+    padding: 20px 0px 20px 0;
     box-sizing: border-box;
     display: flex;
-    background-color: black;
+    background-color: rgb(0, 0, 0);
     justify-content: space-around;
-    max-width: 100%;
-    overflow: hidden;
     height: 90px;
-   
+    box-shadow: 0px 10px 20px rgba(0,0,0,1);
 }
+
 .menuIcon{ 
     display: flex;
     justify-content: center;
@@ -39,8 +39,19 @@ header{
     flex-direction: column;    
     font-size: 1em;
     color: #ccc;
+    height: 50px;
+    transition: transform .3s;
+   
+}
+.menuIcon:hover:not(:nth-child(2)){
+    transform: scale(1.1);
+    background-color: #ffcd48;
 }
 
+#menuPrincipial > .menuIcon:not(:nth-child(2)) {
+    border-radius: 25px; /* ajusta el valor según tu preferencia */
+    border: 2px solid #ffcd48; /* ajusta el color y el grosor del borde según tu preferencia */
+  }
 .menuIcon img{
 transition: transform 0.3s ease;
 }
@@ -51,12 +62,17 @@ transition: transform 0.3s ease;
   display: flex;  
   justify-content: center;
   align-items: center;  
-  width:150px;
+  padding: 20px;
+  
 }
+
 .menuIcon nav a{ 
     font-size: 700;
     color: white;
     text-decoration: none;
+}
+nav ul{
+    list-style-type:none;
 }
 .logoMenu{
     max-width: 100%;
@@ -66,17 +82,23 @@ transition: transform 0.3s ease;
 main .contenedor1-Hola{ 
     display: flex;
     justify-content: center;
+    flex-direction: column;
+   
 }
-
+.imgTuberia{
+    margin: 0;
+    padding: 0 13% 0 13%;
+}
 .contenedor1-Hola{
     margin-top: 100px;
     display: flex;
-    padding: 10%;
+    padding: 5%;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
     text-align: center;
-    border: 1px solid green;
-    max-width: 100%;
+   
+  
 }
 .contenedor1-Hola h1{
     font-size: 250px;
@@ -84,10 +106,14 @@ main .contenedor1-Hola{
     
 }
 .contenedor1-Hola p{
-    font-size: 1.2em;    
+    font-size: 1.2em;  
+    width: 500px;  
 }
+
+
 /*SEGUNDA PORTADA:CALIDAD DE SERVICIOS*/
 .contenedor2-CalidadServicio{
+    position: relative;
     border: 1px solid ffcd48;
     display: flex;
     flex-direction: column;
@@ -115,7 +141,7 @@ main .contenedor1-Hola{
     transform: scale(1.1);
 }
 .imagenesdeServicio{
-    border: 1px solid red;
+    
     display: flex;
     flex-direction: row;
     height: 100%;
@@ -125,69 +151,288 @@ main .contenedor1-Hola{
 .contenedor2-CalidadServicio p{
     font-size: 1.5em;
     width:500px ;
+    
 }
-.contenedor2-CalidadServicio button{
+
+.box-botonWhatsapp{
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    gap: 10px;
+    padding: 10px;
+    margin: 0;
+    transition: transform .2s;  
+}
+.box-botonWhatsapp img{
+    flex: 1; /* Distribuye el espacio de manera uniforme entre los elementos */
+    width: 50px;
+    height: 50px;
+    max-width: 100%; /* Evita que la imagen se desborde */
+    max-height: 100%; /* Evita que la imagen se desborde */
+    border: 1px solid orange;
+    border-radius: 50%;
+    padding: 10px;
+}
+.box-botonWhatsapp button{
+    height: 50px;
     border: 2px solid #ffcd48; /* Borde de 2px sólido con color ef8818 */
     border-radius: 20px; /* Bordes redondeados */
     background-color: transparent; /* Sin relleno de fondo */
-    padding: 10px 20px; /* Ajusta el relleno según sea necesario */
+    padding: 10px; /* Ajusta el relleno según sea necesario */
     color: #ffcd48; /* Color del texto */
     font-family:'FonAquaFon Made';
     font-size: 16px; /* Tamaño del texto */
     cursor: pointer; /* Cambia el cursor al pasar por encima */
-    margin-bottom: 50px;
+    margin-bottom: 90px;
+    
+}
+.box-botonWhatsapp:hover{
+    transform: scale(1.1);
 }
 
 .contenedor2-CalidadServicio button:hover {
     background-color: #866d27c5; /* Cambia el color de fondo al pasar el mouse */
     color: #fff; /* Cambia el color del texto al pasar el mouse */
 }
-
-
-
-/*flex lineal 
-[CAMBIAR PARA EL EL RESPONSIBLE A COL]*/
-.contenedor-padre{
-    border: 1px solid #ccc;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 300px;
-    background-image: linear-gradient(rgba(0, 0, 0, 5),rgba(255, 0, 0, 0));  
-    /*Separador de elementos (no laterales)*/
-    gap: 20px;
+section {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    position: relative;
+    background:linear-gradient(to bottom, #000000, #011941,#013a41);
+    justify-content: center;
 }
-/* esta determinado el tamaño del flex en 1*/
- .hijo-contenedor{
-    
-    box-sizing: border-box;   
-    transition: filter 0.3s ease;
-    text-align: center;
-    height: 300px;
-    padding: 
-    transition: transform 0.3s ease;
- }
-
- .hijo-contenedor img{
-    transition: transform 0.3s ease;
-    
-    filter: grayscale(100%); /* Cambia a escala de grises */
-    height: 150px;
-    width: 150px;
- }
- .hijo-contenedor img:hover{
-    filter: grayscale(0%);
-    transform: scale(1.1) rotateY(180deg);
- }
-
-
-
-/*el flex:2 es el que determina el tamaño de espacio dentro del contenedor hijo en el padre
-Aqui se pueden ajustar las transformaciones de los contenedores  haciendo hover*/
-.contenedor-padre .hijo-contenedor{
-transition: transform 0.7s ease;
-}
-.contenedor-padre .hijo-contenedor:hover{
-    transform: scale(1.1);
-    border: 1px solid #ffcd48; 
+h1{
+   font-size: 4em;
+   text-align: center;
+   justify-content: center;
+   color: #ffcd48;
    
-  }
+   text-shadow:4px 4px 8px rgba(0, 0, 0, 0.5);
+
+}
+.container{
+    margin-left: 10%;
+    margin-right: 10%;
+    width: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;    
+    height: auto;
+}
+
+.container .card{ 
+    position: relative;
+    cursor: pointer;
+  
+}
+.card .box{
+    width: 300px;
+    height: auto;
+    transition: .5s;
+}
+.card-LOGO{
+    margin-top: 10%;
+    gap: 30px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1.3em ;
+    letter-spacing:0.2em;
+   
+}
+.card-LOGO img{
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 10px;
+}
+.card .box.box1{
+    position: relative;
+    background:linear-gradient(to bottom, #000000, #000e24);
+    border: 1px solid orange;
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    transform: translateY(100px);
+}
+.card:hover .box.box1{
+    opacity: .9;
+    transform: translateY(0);
+    transition: transform 0.3s;
+    border-radius: 20px;
+    
+}
+.card:hover .content img{
+    filter: contrast(0%);
+    transform: scale(0.9);
+}
+.content{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   gap: 15px;
+}
+.content p{
+   text-align: center;
+   width: 90%;
+ }
+.content img{
+    width: 75%;
+}
+.content h3{
+    position: relative;
+    top:-24px;
+    padding: 8px;
+    color: #ffffff;
+   
+    text-align: center;
+    font-size: 1.5 em;
+}
+.card .box.box2{
+    
+    border-radius: 25px;
+    position: relative;
+    background: #383838;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    transform: translateY(-150px);
+    
+}
+.card:hover .box.box2{
+    transform: translateY(0);
+    box-shadow: 0 2px 15px 2px #00000062;
+    border-radius: 20px;
+}
+.content p{
+    margin: 10px 0 0 0;
+    padding: 0;
+    color: #ffffff;
+}
+.content a{
+    margin: 15 px 0 0;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color: #ffffff;
+    padding: 10px;
+    border:1px solid #ffffff;
+    border-radius: 25px;
+    transition: transform 0.3s;
+}
+.content a:hover{
+    background: #ffcd48;
+    color: black;
+    text-decoration: none;
+    transform: scale(1.2);
+}
+/*2 -------------------    PAGINA DE SERVICE.html*/
+.box-service{
+    margin-left: 12%;
+    margin-right: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 75%;
+    gap: 25px;
+    border: 1px solid #ffce4886;
+    border-radius: 25px;
+    padding: 25px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+section .box-service{
+    margin-top: 50px;
+    margin-bottom: 15px;
+}
+section h1{
+    font-size: 2em;
+    
+}
+section h2{
+    color:#ffcd48;
+    width: 25%;
+    text-align: center;
+}
+
+section p { 
+    width: 70%;
+    text-align: right;
+    line-height: 25px;
+}
+.category-item{
+    width: 20%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #b8b8b8;
+    font-size: 0.7em;
+    gap: 10px;
+    text-align: center;
+    padding: 10px;
+}
+.img-category{
+    border: 1px solid #ffcd48;
+    border-radius: 50%;
+    width: 70px;
+}
+.ubicacionEmpresa{
+    padding: 5%;
+    background: #013a41;   
+    width: 100%;
+    align-items: center;
+}
+.boxUbicacion{
+    width: 86%;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background:linear-gradient(to left,  #000000,#0000002c);
+    gap: 1px;
+
+}
+iframe{
+    border-radius: 25px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+}
+.boxUbicacion h2 { 
+   text-align: center;
+    writing-mode: vertical-rl;
+    color: white;
+}
+.tittleBoxUbi{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 100px;
+    
+}
+footer{
+   
+    height: 100px;
+    width: auto;
+    display: flex;
+    box-sizing: border-box;
+    margin:0;
+    background:linear-gradient(to top, #000000, #021a41,#013a41);
+    justify-content: space-around;
+    align-items: center;
+    
+}
+footer img{ 
+    width: 50px;
+}
