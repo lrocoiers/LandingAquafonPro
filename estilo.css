@@ -212,6 +212,7 @@ main .contenedor1-Hola{
 }
 
 /*CONTENEDOR DE TODOS LOS SERVICIOS*/
+
 .contenedorAguasPluvial{
     width: 100%;
     height: auto;
@@ -304,13 +305,14 @@ h1{
 
 }
 .container{
+    
     margin-left: 10%;
     margin-right: 10%;
     width: 1000px;
-    position: relative;
     display: flex;
     justify-content: space-between;    
     height: auto;
+    gap: 25px;
 }
 
 .container .card{ 
@@ -339,6 +341,25 @@ h1{
     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
     border-radius: 50%;
     padding: 10px;
+}
+.card-LOGO a{
+    padding: 15px;
+    border-radius: 30px;
+    background-color: transparent; /* Sin relleno de fondo */
+    border: 1px solid #ffffff;
+    color: #ffffff; /* Color del texto */
+    text-align: center;
+    text-decoration: none;
+    font-family:'FonAquaFon Made';
+    font-size:0.8em; /* Tamaño del texto */
+    cursor: pointer;
+    transition: transform .3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.card-LOGO a:hover{
+    transform: scale(1.1);
+    border-radius: 30px;
+    background-color: #0000004d;
 }
 .card .box.box1{
     position: relative;
@@ -512,6 +533,36 @@ iframe{
     height: 100px;
     
 }
+.contactoForm{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #000000;
+}
+.contenedorForm{
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 29px;
+    
+}
+.contenedorForm button{
+    padding: 15px 10px;
+    border-radius: 20px;
+    background-color: transparent; /* Sin relleno de fondo */
+    border: 1px solid #ffcd48;
+    color: #ffffff; /* Color del texto */
+    font-family:'FonAquaFon Made';
+    font-size: 16px; /* Tamaño del texto */
+    cursor: pointer;
+    transition: transform .3s;
+}
+.contenedorForm button:hover{
+    transform: scale(1.1);
+    background-color: #ffcd48;
+    color: #000000;
+}
 footer{
    
     height: 100px;
@@ -526,4 +577,90 @@ footer{
 }
 footer img{ 
     width: 50px;
+}
+
+/*PAGINA DE TRABAJOS.HTML*/
+.espacioDeHeader{
+    height:  92px;
+}
+.imgContenedor{
+    width: 75%;
+    height: auto;
+   
+}
+.trabajosRealizados{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    border: 1px solid green;
+    
+}
+.contenedorTrabajosReali{
+    border: 1px solid #ffce4800;
+    background-color: #00000021;
+    border-radius: 25px;
+    width: 85%;
+    height: auto;
+    margin-bottom: 25px;
+    padding: 25px;    
+    transition: border .3s;
+}
+.contenedorTrabajosReali:hover{
+    border: 1px solid #ffce48;
+}
+
+.contenedorTrabajosReali h1{
+    padding: 9px;
+  
+}
+.imgYDescripcion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    
+}
+.imgContenedor{
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    filter: grayscale(100%);
+    transition: filter 0.3s ease;
+}
+.imgContenedor:hover{
+    filter: grayscale(0%);
+}
+.imgYDescripcion p{
+    padding: 5px;
+    text-align:justify;
+    font-size: 1.2em;
+}
+.imgYDescripcion h3{
+    font-size: 1.5em;
+}
+/*PAGINA DE TIPS PAGE*/
+.todosContenedorTips{
+    background-color: #000000a6;
+}
+.tipsContenedor{
+
+display: flex;
+box-sizing: border-box;
+align-items: center;
+flex-direction: column;
+gap: 25px;
+}
+.tipsContenedor h1{
+    width: 90%;
+    font-size: 2em;
+}
+.tipsContenedor h2{
+    font-size: 1.5em;
+    width: 80%;
+}
+.tipsContenedor p{
+    font-size: 1.2em;
+    text-align: justify;
+    line-height: 1.5;
+    margin-bottom: 25px;
 }
